@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 import Utils.functions_menu;
 import Modules.Design.Clases.LogoDesign;
 import Modules.Functions.CRUD.create_functions;
+import Modules.Functions.CRUD.delete_functions;
 import Modules.Functions.CRUD.read_functions;
 import Modules.Design.Clases.Singleton;
 import java.util.ArrayList;
@@ -50,7 +51,7 @@ public class menu_services {
 						break;
 
 					case 3:  // DELETE
-						JOptionPane.showMessageDialog(null, "Delete");
+						delete_functions.delete_LogoDesign(log);
 						key_menu_logo = true;
 						break;
 

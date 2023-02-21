@@ -29,7 +29,7 @@ public class read_functions {
 
 		if (Singleton.LogoDesign.isEmpty()) {
 
-			JOptionPane.showMessageDialog(null, "No existe ningún identificador para poder leer", "Error", JOptionPane.ERROR_MESSAGE);	
+			JOptionPane.showMessageDialog(null, "No existe ningún logo para poder leer", "Error", JOptionPane.ERROR_MESSAGE);	
 
 		}else {
 

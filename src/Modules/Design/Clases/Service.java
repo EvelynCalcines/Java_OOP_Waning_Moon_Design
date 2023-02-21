@@ -6,7 +6,7 @@ public abstract class Service implements Comparable<Service> {
 	
 	private String id;
 	private String owner_name;
-	private String course_name;
+	private String course_name; // HOla
 	private int price;
 	private String colors; 
 	
