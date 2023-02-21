@@ -3,10 +3,10 @@ package Modules.Functions.CRUD;
 import javax.swing.JOptionPane;
 
 import Modules.Design.Clases.Singleton;
+import Modules.utils.data_functions;
+import Modules.utils.find_functions;
+import Modules.utils.functions_menu;
 import Modules.Design.Clases.LogoDesign;
-import Utils.data_functions;
-import Utils.find_functions;
-import Utils.functions_menu;
 
 
 public class read_functions {

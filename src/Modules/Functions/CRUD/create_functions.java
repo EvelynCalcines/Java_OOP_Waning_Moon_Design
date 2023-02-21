@@ -2,8 +2,8 @@ package Modules.Functions.CRUD;
 
 import javax.swing.JOptionPane;
 import Modules.Design.Clases.Singleton;
+import Modules.utils.find_functions;
 import Modules.Design.Clases.LogoDesign;
-import Utils.find_functions;
 
 public class create_functions {
 	

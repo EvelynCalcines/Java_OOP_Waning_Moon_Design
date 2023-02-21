@@ -1,12 +1,14 @@
 package Menu;
 
 import javax.swing.JOptionPane;
-import Utils.functions_menu;
+
 import Modules.Design.Clases.LogoDesign;
 import Modules.Functions.CRUD.create_functions;
 import Modules.Functions.CRUD.delete_functions;
 import Modules.Functions.CRUD.read_functions;
+import Modules.utils.functions_menu;
 import Modules.Design.Clases.Singleton;
+
 import java.util.ArrayList;
 
 public class menu_services {

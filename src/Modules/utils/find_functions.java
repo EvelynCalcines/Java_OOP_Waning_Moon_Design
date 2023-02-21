@@ -1,4 +1,4 @@
-package Utils;
+package Modules.utils;
 
 import Modules.Design.Clases.Singleton; 
 import Modules.Design.Clases.LogoDesign;

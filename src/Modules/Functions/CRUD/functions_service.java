@@ -1,8 +1,8 @@
 package Modules.Functions.CRUD;
 
-import javax.swing.JOptionPane;
 import Modules.Design.Clases.Singleton;
-import Utils.data_functions;
+import Modules.utils.data_functions;
+import utils.validates;
 import Modules.Design.Clases.LogoDesign;
 
 public class functions_service {
@@ -11,24 +11,19 @@ public class functions_service {
 
 	public static LogoDesign create_logoDesign() {
 		
-		int price = 0;
-		
 		String id = Singleton.id;
 		
-		String owner_name = JOptionPane.showInputDialog(null, "Escribe su nombre: ", "Nombre", JOptionPane.QUESTION_MESSAGE);
+		String owner_name = data_functions.askowner_name("Escribe su nombre", "Nombre");
 				
-		String course_name = JOptionPane.showInputDialog(null, "Nombre de la marca/empresa: ", "Nombre de la Marca", JOptionPane.QUESTION_MESSAGE);
+		String course_name = data_functions.askcourse_name("Nombre de la marca/empresa", "Nombre de la marca");
 		
-		String price_string = JOptionPane.showInputDialog(null, "¿Qué precio tiene el servicio?", "Precio", JOptionPane.QUESTION_MESSAGE);
-		price = Integer.parseInt(price_string);
+		int price = validates.price("¿Qué precio tiene el servicio?", "Precio");
 		
 		String[] option_colors = {"Pasteles", "Claros", "Oscuros" };
-		String colors = JOptionPane.showInputDialog(null, "¿Qué colores quiere elegir?", "Colores", JOptionPane.QUESTION_MESSAGE);
-		
+		String colors = validates.combo(option_colors, "¿Qué colores quiere elegir?", "Colores");
 		
 		String[] option_template_type = {"Básico", "Estándar", "Premium" };
-		String template_type = JOptionPane.showInputDialog(null, "¿Qué tipo de plantilla desea?", "Plantillas", JOptionPane.QUESTION_MESSAGE);
-		
+		String template_type = validates.combo(option_template_type, "¿Qué tipo de plantilla desea?", "Plantillas");
 
 		return new LogoDesign(id, owner_name, course_name, price, colors, template_type); 
 		
