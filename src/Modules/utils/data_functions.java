@@ -41,9 +41,23 @@ public class data_functions {
 		String owner_name = "";
 		boolean result = false;
 
+		do {
+
 		owner_name = validates.cad(message, title);
 
 		result = regular_expr.owner_name(owner_name);
+
+		if (result == false) {
+
+			JOptionPane.showMessageDialog(null, "No es un nombre válido", "Error", JOptionPane.ERROR_MESSAGE);
+
+		}else {
+
+			result = true;
+
+		}
+
+		}while (result == false);
 
 		return owner_name;
 	} 
@@ -55,9 +69,23 @@ public class data_functions {
 		String course_name = "";
 		boolean result = false;
 
+		do {
+
 		course_name = validates.cad(message, title);
 
 		result = regular_expr.course_name(course_name);
+
+		if (result == false) {
+
+			JOptionPane.showMessageDialog(null, "No es un curso válido", "Error", JOptionPane.ERROR_MESSAGE);
+
+		}else {
+
+			result = true;
+
+		}
+
+		}while (result == false);
 
 		return course_name;
 	} 
