@@ -3,6 +3,7 @@ package Menu;
 import javax.swing.JOptionPane;
 
 import Modules.Design.Clases.LogoDesign;
+import Modules.Functions.update_functions;
 import Modules.Functions.CRUD.create_functions;
 import Modules.Functions.CRUD.delete_functions;
 import Modules.Functions.CRUD.read_functions;
@@ -48,7 +49,7 @@ public class menu_services {
 						break;
 
 					case 2: // UPDATE
-						JOptionPane.showMessageDialog(null, "Update");
+						update_functions.update_LogoDesign(log);
 						key_menu_logo = true;
 						break;
 

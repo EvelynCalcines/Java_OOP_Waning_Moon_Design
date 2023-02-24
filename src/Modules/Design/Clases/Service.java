@@ -67,7 +67,7 @@ public abstract class Service implements Comparable<Service> {
 		this.owner_name = owner_name;
 	}
 	
-	public void setCurse_name(String curse_name) {
+	public void setCourse_name(String curse_name) {
 		this.course_name = curse_name;
 	}
 	
