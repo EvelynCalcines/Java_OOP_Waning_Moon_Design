@@ -80,7 +80,7 @@ public class read_functions {
 							
 						case 2:
 						
-							atributo = ("Nombre de la marca/empresa: " + log.getCurse_name());
+							atributo = ("Nombre de la marca/empresa: " + log.getCourse_name());
 							break;
 							
 						case 3: 

@@ -6,6 +6,7 @@ import Modules.Design.Clases.LogoDesign;
 import Modules.Functions.update_functions;
 import Modules.Functions.CRUD.create_functions;
 import Modules.Functions.CRUD.delete_functions;
+import Modules.Functions.CRUD.order_functions;
 import Modules.Functions.CRUD.read_functions;
 import Modules.utils.functions_menu;
 import Modules.Design.Clases.Singleton;
@@ -17,8 +18,9 @@ public class menu_services {
 	public static void main(String[] args) {
 
 		String[] services = {"Diseño de logo", "Tarjeta de invitación", "Redes Sociales", "Salir" };
-		String[] crud = {"Create", "Read", "Update", "Delete", "Back", "Salir"};
-		boolean key_menu_services, key_menu_logo, key_menu_invitation, key_menu_socialnetworks = false;
+		String[] crud = {"Create", "Read", "Update", "Delete", "Ordenar", "Back", "Salir"};
+		boolean key_menu_services, key_menu_invitation, key_menu_socialnetworks = false;
+		boolean key_menu_logo = false;
 		LogoDesign log = null;
 		Singleton.LogoDesign = new ArrayList <LogoDesign> ();
 
@@ -58,7 +60,12 @@ public class menu_services {
 						key_menu_logo = true;
 						break;
 
-					case 4: // ATRÁS
+					case 4: // ORDENAR
+						order_functions.order_LogoDesign();
+						break;
+
+
+					case 5: // ATRÁS
 						JOptionPane.showMessageDialog(null, "Back");
 						key_menu_logo = false;
 						break;

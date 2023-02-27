@@ -42,12 +42,12 @@ public class LogoDesign extends Service {
 			
 			return "LogoDesign: " + "\n" + "Id: " +  getId() + "\n" + 
 				   "Nombre del propietario: " + getOwner_name() + "\n" + 
-				   "Nombre del curso: " + getCurse_name() + "\n" + 
+				   "Nombre del curso: " + getCourse_name() + "\n" + 
 				   "Precio: " + getPrice() + "\n" + 
 				   "Colores: " + getColors() + "\n" +
 				   "Tipo de plantilla: " + getTemplate_type(); 	
 		}
+
 }
 
 //// END LOGODESIGN
-

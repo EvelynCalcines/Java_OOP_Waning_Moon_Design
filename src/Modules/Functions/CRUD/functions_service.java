@@ -129,29 +129,9 @@ public class functions_service {
 				}
 
 			}while (key != true);
+			
 		}
 
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

@@ -45,7 +45,7 @@ public abstract class Service implements Comparable<Service> {
 		return owner_name;
 	}
 	
-	public String getCurse_name() {
+	public String getCourse_name() {
 		return course_name;
 	}
 	
