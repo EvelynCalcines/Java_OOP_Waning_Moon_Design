@@ -45,7 +45,7 @@ public class LogoDesign extends Service {
 				   "Nombre del curso: " + getCourse_name() + "\n" + 
 				   "Precio: " + getPrice() + "\n" + 
 				   "Colores: " + getColors() + "\n" +
-				   "Tipo de plantilla" + getTemplate_type();
+				   "Tipo de plantilla: " + getTemplate_type();
 		}
 
 }

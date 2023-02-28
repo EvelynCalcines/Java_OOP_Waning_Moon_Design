@@ -24,8 +24,9 @@ public class read_functions {
 		int location = -1;
 		String cad = "";
 		String atributo = "";
-		String[] atributos = { "Identificador", "Nombre del propietario", "Nombre del curso", "Precio", "Colores", "Tipo de plantilla", "Todos" };
+		String[] atributos = { "Identificador", "Nombre del propietario", "Nombre del curso", "Precio", "Colores", "Tipo de plantilla", "Volver", "Todos" };
 		boolean key_read = false;
+		boolean key_volver = false;
 
 		if (Singleton.LogoDesign.isEmpty()) {
 
@@ -66,44 +67,60 @@ public class read_functions {
 						
 						int	option_atributo = functions_menu.menubuttons(atributos, "¿Qué característica quiere leer?", "Elige opción deseada");
 						
-						switch (option_atributo) {
-						
-						case 0: 
+						do {
+
+							switch (option_atributo) {
 							
-							atributo = ("Identificador: " + log.getId());
-							break;
+							case 0: 
+								
+								atributo = ("Identificador: " + log.getId());
+								break;
+								
+							case 1:
+								
+								atributo = ("Nombre del propietario: " + log.getOwner_name());
+								break;
+								
+							case 2:
 							
-						case 1:
+								atributo = ("Nombre de la marca/empresa: " + log.getCourse_name());
+								break;
+								
+							case 3: 
+								
+								atributo = ("Precio: " + log.getPrice());
+								break;
+								
+							case 4: 
+								
+								atributo = ("Colores: " + log.getColors());
+								break;
+								
+							case 5: 
+								
+								atributo = ("Tipo de plantilla: " + log.getTemplate_type());
+								break;
+
+							case 6:
 							
-							atributo = ("Nombre del propietario: " + log.getOwner_name());
-							break;
+								atributo = ("Volver");
+								key_volver = false;
+								break;	
+
+							case 7:
+								
+								atributo = (log.toString());
+
+							default: 
+
+								key_read = false;
+								break;
+
+							}
 							
-						case 2:
-						
-							atributo = ("Nombre de la marca/empresa: " + log.getCourse_name());
-							break;
-							
-						case 3: 
-							
-							atributo = ("Precio: " + log.getPrice());
-							break;
-							
-						case 4: 
-							
-							atributo = ("Colores: " + log.getColors());
-							break;
-							
-						case 5: 
-							
-							atributo = ("Tipo de plantilla: " + log.getTemplate_type());
-							break;
-							
-						case 6:
-							
-							atributo = (log.toString());
-						}
-						
-						JOptionPane.showMessageDialog(null, atributo, "Características", JOptionPane.INFORMATION_MESSAGE);
+							JOptionPane.showMessageDialog(null, atributo, "Características", JOptionPane.INFORMATION_MESSAGE);
+
+					}while (key_volver != false);
 
 					}else {
 
@@ -112,14 +129,14 @@ public class read_functions {
 					}
 
 					break;
-
+				
 				default:
+
 					key_read = false;
 					break;
-
 				}  
 
-			}while (key_read != true);
+			}while (key_read == true);
 		}
 	}
 }
