@@ -1,10 +1,9 @@
-package Modules.Functions;
+package Modules.Functions.CRUD;
 
 import javax.swing.JOptionPane;
 
 import Modules.Design.Clases.LogoDesign;
 import Modules.Design.Clases.Singleton;
-import Modules.Functions.CRUD.functions_service;
 import Modules.utils.find_functions;
 
 public class update_functions {
