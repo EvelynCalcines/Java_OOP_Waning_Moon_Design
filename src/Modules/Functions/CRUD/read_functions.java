@@ -3,7 +3,6 @@ package Modules.Functions.CRUD;
 import javax.swing.JOptionPane;
 
 import Modules.Design.Clases.Singleton;
-import Modules.utils.data_functions;
 import Modules.utils.find_functions;
 import Modules.utils.functions_menu;
 import Modules.Design.Clases.LogoDesign;
@@ -11,12 +10,6 @@ import Modules.Design.Clases.LogoDesign;
 
 public class read_functions {
 
-	public static LogoDesign find_logoDesign_id() { 
-
-		Singleton.id = data_functions.askid("¿Cuál es el código del logo?", "Id");
-
-		return new LogoDesign(Singleton.id); 
-	}
 
 	public static void read_logoDesign(LogoDesign log) {
 		String[] menu = { "All", "One to one", "Atrás" };
@@ -57,7 +50,7 @@ public class read_functions {
 
 					location = -1;
 
-					log = find_logoDesign_id();
+					log = functions_service.asklogoDesign_id("¿Cuál es el identificador del servicio que quieres leer?");
 
 					location = find_functions.find_logoDesign(log);
 
