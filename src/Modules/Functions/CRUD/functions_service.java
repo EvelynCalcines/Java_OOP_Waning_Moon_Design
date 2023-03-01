@@ -35,9 +35,9 @@ public class functions_service {
 		
 	} /// END CREATE ///
 
-	public static LogoDesign create_logoDesign_id() { 
+	public static LogoDesign asklogoDesign_id(String message) { 
 
-		Singleton.id = data_functions.askid("¿Qué identificador va a asignar al servicio?", "Id");
+		Singleton.id = data_functions.askid(message, "Id");
 
 		return new LogoDesign(Singleton.id); 
 	}
@@ -48,7 +48,7 @@ public class functions_service {
 
 		int location = -1;
 
-		log = functions_service.create_logoDesign_id();
+		log = functions_service.asklogoDesign_id("¿Cuál es el identificador del servicio que quieres modificar?");
 
 		location = find_functions.find_logoDesign(log);
 

@@ -11,7 +11,7 @@ public class create_functions {
 		
 		int location = -1;
 		
-		log = functions_service.create_logoDesign_id();    
+		log = functions_service.asklogoDesign_id("¿Cuál es el identificador del servicio que quieres crear?");    
 				
 		location = find_functions.find_logoDesign(log);
 		
