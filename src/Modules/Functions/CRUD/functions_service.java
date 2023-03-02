@@ -23,7 +23,7 @@ public class functions_service {
 				
 		String course_name = data_functions.askcourse_name("Nombre de la marca/empresa", "Nombre de la marca");
 		
-		int price = validates.price("¿Qué precio tiene el servicio?", "Precio");
+		int price = validates.number("¿Qué precio tiene el servicio?", "Precio");
 		
 		String[] option_colors = {"Pasteles", "Claros", "Oscuros" };
 		String colors = validates.combo(option_colors, "¿Qué colores quiere elegir?", "Colores");
@@ -101,7 +101,7 @@ public class functions_service {
 
 				case 3:
 
-					int price = validates.price("¿Qué precio tenía el servicio?", "Precio");
+					int price = validates.number("¿Qué precio tenía el servicio?", "Precio");
 					ser.setPrice(price);
 					key = true;
 					break;
