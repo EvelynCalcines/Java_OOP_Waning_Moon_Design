@@ -90,4 +90,39 @@ public class data_functions {
 		return course_name;
 	} 
 	
+
+
+	// TARJETA DE INVITACIÓN //
+
+	// NOMBRE DEL INVITADO //	
+
+	public static String askinvited_name(String message, String title) {
+
+		String invited_name = "";
+		boolean result = false;
+
+		do {
+
+			invited_name = validates.cad(message, title);
+
+		result = regular_expr.invited_name(invited_name);
+
+		if (result == false) {
+
+			JOptionPane.showMessageDialog(null, "No es un curso válido", "Error", JOptionPane.ERROR_MESSAGE);
+
+		}else {
+
+			result = true;
+
+		}
+
+		}while (result == false);
+
+		return invited_name;
+	} 
+
+
+
+
 }

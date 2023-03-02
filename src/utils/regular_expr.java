@@ -8,6 +8,7 @@ public class regular_expr {
 
     private static final String Expresion_owner_name = "^[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]*([ ][A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]*)?$";
     private static final String Expresion_course_name = "^[A-Za-záéíóúñÑ]+(\s?[A-Za-záéíóúñÑ0-9_-]+)*$";
+    private static final String Expresion_invited_name = "^[A-Za-záéíóúñÑ]+(\s?[A-Za-záéíóúñÑ0-9_-]+)*$";
     private static final String Expresion_id = "^[a-zA-Z_][a-zA-Z0-9_]*$";
 
     // IDENTIFICADOR (VALIDAR) //
@@ -46,5 +47,21 @@ public class regular_expr {
         return matcher.matches();
 
     }
+
+
+    // TARJETA DE INVITACIÓN //
+
+    // NOMBRE DEL INVITADO //
+
+    public static boolean invited_name(String invited_name) {
+
+        Pattern pattern = Pattern.compile(Expresion_invited_name);
+        Matcher matcher = pattern.matcher(invited_name); 
+
+        return matcher.matches();
+
+    }
+
+
     
 }

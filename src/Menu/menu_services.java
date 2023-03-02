@@ -2,6 +2,7 @@ package Menu;
 
 import javax.swing.JOptionPane;
 
+import Modules.Design.Clases.InvitationCard;
 import Modules.Design.Clases.LogoDesign;
 import Modules.Functions.CRUD.create_functions;
 import Modules.Functions.CRUD.delete_functions;
@@ -22,7 +23,9 @@ public class menu_services {
 		boolean key_menu_crud = false;
 		boolean key_menu_services = false; 
 		LogoDesign log = null;
+		InvitationCard inv = null;
 		Singleton.LogoDesign = new ArrayList <LogoDesign> ();
+		Singleton.InvitationCard = new ArrayList<InvitationCard> ();
 
 		do {
 
@@ -92,7 +95,7 @@ public class menu_services {
 
 					case 0: // CREATE
 						
-						key_menu_crud = true;
+						create_functions.create_InvitationCard(inv);
 						break;
 
 					case 1: // READ

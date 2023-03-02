@@ -9,11 +9,12 @@ import utils.validates;
 
 import javax.swing.JOptionPane;
 
+import Modules.Design.Clases.InvitationCard;
 import Modules.Design.Clases.LogoDesign;
 
 public class functions_service {
 	
-	//// CREAMOS //// 
+	//// CREAMOS LOGODESIGN//// 
 
 	public static LogoDesign create_logoDesign() {
 		
@@ -133,5 +134,42 @@ public class functions_service {
 		}
 
 	}
+
+	
+
+	/// CREAMOS INVITATIONCARD ///
+
+	public static InvitationCard askinvitationCard_id(String message) { 
+
+		Singleton.id = data_functions.askid(message, "Id");
+
+		return new InvitationCard(Singleton.id); 
+	
+	}
+
+	public static InvitationCard create_InvitationCard() {
+		
+		String id = Singleton.id;
+		
+		String owner_name = data_functions.askowner_name("Escribe su nombre", "Nombre");
+				
+		String course_name = data_functions.askcourse_name("Nombre de la marca/empresa", "Nombre de la marca");
+
+		String invited_name = data_functions.askinvited_name("Escribe el nombre del invitado", "Nombre del invitado");
+		
+		int price = validates.number("¿Qué precio tiene el servicio?", "Precio");
+		
+		String[] option_colors = {"Pasteles", "Claros", "Oscuros" };
+		String colors = validates.combo(option_colors, "¿Qué colores quiere elegir?", "Colores");
+		
+		String[] option_shape = {"Circular", "Cuadrada", "Rectangular" };
+		String shape = validates.combo(option_shape, "¿Qué tipo de forma desea?", "Forma");
+
+		return new InvitationCard(id, owner_name, course_name, price, invited_name, colors, shape); 
+		
+	} /// END CREATE ///
+
+
+
 
 }
