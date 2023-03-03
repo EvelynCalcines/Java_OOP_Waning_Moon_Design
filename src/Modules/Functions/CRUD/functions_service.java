@@ -76,7 +76,7 @@ public class functions_service {
 
 			do {
 
-				option_menu = functions_menu.menubuttons(atributos, "Selecciona la opción de desea actualizar", "Elija la opción deseada");
+				option_menu = functions_menu.menubuttons(atributos, "Selecciona la opción de desea actualizar:", "Elija la opción deseada");
 
 				switch (option_menu) {
 
@@ -155,7 +155,7 @@ public class functions_service {
 				
 		String course_name = data_functions.askcourse_name("Nombre de la marca/empresa", "Nombre de la marca");
 
-		String invited_name = data_functions.askinvited_name("Escribe el nombre del invitado", "Nombre del invitado");
+		String invited_name = data_functions.askinvited_name("Escribe el nombre del invitado/a", "Nombre del invitado/a");
 		
 		int price = validates.number("¿Qué precio tiene el servicio?", "Precio");
 		
@@ -170,6 +170,102 @@ public class functions_service {
 	} /// END CREATE ///
 
 
+	// UPDATE TARJETA DE INVITACIÓN // 
 
+	public static void update_InvitationCard(InvitationCard inv, Service ser) {
 
+		int location = -1;
+
+		inv = functions_service.askinvitationCard_id("¿Cuál es el identificador del servicio que quieres modificar?");
+
+		location = find_functions.find_invitationCard(inv);
+
+		if (location != -1) {
+
+			JOptionPane.showMessageDialog(null, "Ya existe este identificador", "Error", JOptionPane.ERROR_MESSAGE);
+
+		}else {
+
+			ser.setId(Singleton.id);
+
+		}
+
+	}
+
+	public static void update_inv(Service ser) {
+
+		if (ser instanceof InvitationCard) {
+
+			String[] atributos = { "Identificador", "Nombre del propietario", "Nombre del curso", "Nombre del invitado/a", "Precio", "Colores", "Forma" };
+			int option_menu = 0;
+			boolean key = false;
+			InvitationCard inv = null;
+
+			do {
+
+				option_menu = functions_menu.menubuttons(atributos, "Selecciona la opción de desea actualizar:", "Elija la opción deseada");
+
+				switch (option_menu) {
+
+				case 0: 
+
+					functions_service.update_InvitationCard(inv, ser);
+					key = true;
+					break;
+				
+				case 1:
+
+					String owner_name = data_functions.askowner_name("¿A qué nombre quiere que esté el servicio?", "Nombre");
+					ser.setOwner_name(owner_name);
+					key = true;
+					break;
+
+				case 2: 
+
+					String course_name = data_functions.askcourse_name("¿Cuál es el nombre de la marca/empresa que desea actualizar?", "Nombre de la marca/empresa");
+					ser.setCourse_name(course_name);
+					key = true;
+					break;
+
+				case 3: 
+
+					String invited_name = data_functions.askinvited_name("¿A qué nombre de invitado/a desea cambiar?", "Nombre del invitado/a");
+					((InvitationCard) ser).setInvited_name(invited_name);
+					key = true;
+					break;
+
+				case 4:
+
+					int price = validates.number("¿Qué precio tenía el servicio?", "Precio");
+					ser.setPrice(price);
+					key = true;
+					break;
+
+				case 5: 
+
+					String[] option_colors = {"Pasteles", "Claros", "Oscuros" };
+					ser.setColors(validates.combo(option_colors, "¿A qué colores quieres cambiar?", "Colores"));
+					key = true;
+					break;
+
+				case 6:
+
+					String[] option_shape = {"Circular", "Cuadrado", "Rectangular" };
+					String shape = validates.combo(option_shape, "¿A qué tipo de forma quiere cambiar?", "Forma");
+					((InvitationCard) ser).setShape(shape);
+					key = true;
+					break;
+
+				default:
+					
+					key = true;
+					break;
+
+				}
+
+			}while (key != true);
+			
+		}
+
+	}
 }

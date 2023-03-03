@@ -2,11 +2,14 @@ package Modules.Functions.CRUD;
 
 import javax.swing.JOptionPane;
 
+import Modules.Design.Clases.InvitationCard;
 import Modules.Design.Clases.LogoDesign;
 import Modules.Design.Clases.Singleton;
 import Modules.utils.find_functions;
 
 public class update_functions {
+
+    // LOGOTIPO //
     
     public static void update_LogoDesign(LogoDesign log) {
 
@@ -39,5 +42,39 @@ public class update_functions {
             }
         }
     }
+
+    // TARJETA DE INVITACIÓN //
+
+    public static void update_InvitationCard(InvitationCard inv) {
+
+        int location = -1;
+
+        if (Singleton.InvitationCard.isEmpty()) {
+
+            JOptionPane.showMessageDialog(null, "No existe ningún servicio para poder cambiar sus características", "Error", JOptionPane.ERROR_MESSAGE);
+        
+        }else {
+
+            location = -1;
+
+            inv = functions_service.askinvitationCard_id("¿Cuál es el identificador del servicio que quieres modificar?");
+
+            location = find_functions.find_invitationCard(inv);
+
+            if (location != -1) {
+
+                inv = Singleton.InvitationCard.get(location);
+
+                functions_service.update_inv(inv);
+
+                Singleton.InvitationCard.set(location, inv);
+
+            }else {
+
+                JOptionPane.showMessageDialog(null, "No existe ninguna tarjeta de invitación con este código para poder cambiarlo", "Error", JOptionPane.ERROR_MESSAGE);
+
+            }
+        }
+    }    
 
 }

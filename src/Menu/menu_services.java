@@ -103,15 +103,15 @@ public class menu_services {
 						break;
 
 					case 2: // UPDATE
-						JOptionPane.showMessageDialog(null, "Update");
+						update_functions.update_InvitationCard(inv);
 						break; 
 
 					case 3: // DELETE
-						JOptionPane.showMessageDialog(null, "Delete");
+						delete_functions.delete_InvitationCard(inv);
 						break;
 
 					case 4: // ORDENAR
-						JOptionPane.showMessageDialog(null, "Ordenar");
+						order_functions.order_InvitationCard();
 						break;
 
 					case 5: // ATRÁS

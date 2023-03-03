@@ -144,7 +144,7 @@ public static void read_invitationCard(InvitationCard inv) {
 		int location = -1;
 		String cad = "";
 		String atributo = "";
-		String[] atributos = { "Identificador", "Nombre del propietario", "Nombre del curso", "Nombre del invitado", "Precio", "Colores", "Forma", "Volver", "Todos" };
+		String[] atributos = { "Identificador", "Nombre del propietario", "Nombre del curso", "Nombre del invitado/a", "Precio", "Colores", "Forma", "Volver", "Todos" };
 		boolean key_read = false;
 		boolean key_volver = false;
 

@@ -11,6 +11,8 @@ import Modules.orders.owner_name_order;
 import Modules.utils.functions_menu;
 
 public class order_functions {
+
+    // LOGOTIPO //
     
     public static void order_LogoDesign() {
 
@@ -49,6 +51,66 @@ public class order_functions {
                 case 2:
 
                     Collections.sort(Singleton.LogoDesign, new course_name_order());
+                    key = true;
+                    break;
+
+                case 3:
+
+                    key = true;
+                    break;
+
+                default:
+
+                    key = true;
+                    break;
+
+                }
+
+            }while (key != true); 
+
+        }
+
+    }
+
+    // TARJETA DE INVITACIÓN // 
+
+    public static void order_InvitationCard() {
+
+        String[] menu = { "Código de referencia", "Nombre del propietario", "Nombre de la marca/empresa", "Salir" };
+        int option_menu = 0;
+        boolean key = false;
+
+        if (Singleton.InvitationCard.isEmpty()) {
+
+            JOptionPane.showMessageDialog(null, "No existen tarjetas de invitación para poder ordenarlos", "Error", JOptionPane.ERROR_MESSAGE);
+
+        } else if (Singleton.InvitationCard.size() == 1) {
+
+            JOptionPane.showMessageDialog(null, "Sólo existe una tarjeta de invitación y por lo tanto, no se puede ordenar", "Error", JOptionPane.ERROR_MESSAGE);
+
+        } else {
+
+            do {
+
+                option_menu = functions_menu.menubuttons(menu, "Seleccione el orden que usted prefiera:", "Elija la opción deseada");
+
+                switch (option_menu) {
+
+                case 0: 
+
+                    Collections.sort(Singleton.InvitationCard, new id_order());
+                    key = true;
+                    break;
+
+                case 1: 
+
+                    Collections.sort(Singleton.InvitationCard, new owner_name_order());
+                    key = true;
+                    break;
+
+                case 2:
+
+                    Collections.sort(Singleton.InvitationCard, new course_name_order());
                     key = true;
                     break;
 
