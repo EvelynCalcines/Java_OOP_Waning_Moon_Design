@@ -165,7 +165,7 @@ public class functions_service {
 		String[] option_shape = {"Circular", "Cuadrada", "Rectangular" };
 		String shape = validates.combo(option_shape, "¿Qué tipo de forma desea?", "Forma");
 
-		return new InvitationCard(id, owner_name, course_name, price, invited_name, colors, shape); 
+		return new InvitationCard(id, owner_name, course_name, invited_name, price, colors, shape); 
 		
 	} /// END CREATE ///
 

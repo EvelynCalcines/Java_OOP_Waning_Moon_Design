@@ -99,7 +99,7 @@ public class menu_services {
 						break;
 
 					case 1: // READ
-						JOptionPane.showMessageDialog(null, "Read");
+						read_functions.read_invitationCard(inv);
 						break;
 
 					case 2: // UPDATE
@@ -124,7 +124,6 @@ public class menu_services {
 						JOptionPane.showMessageDialog(null, "Salir");
 						key_menu_crud = false;
 						key_menu_services = false;
-						System.out.print("Saliendo del todo");				
 						break; 
 
 					}

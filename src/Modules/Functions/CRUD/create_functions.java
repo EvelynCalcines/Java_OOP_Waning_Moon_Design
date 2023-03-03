@@ -8,6 +8,8 @@ import Modules.Design.Clases.LogoDesign;
 
 public class create_functions {
 	
+	// LOGO //
+
 	public static void create_LogoDesign(LogoDesign log) {
 		
 		int location = -1;

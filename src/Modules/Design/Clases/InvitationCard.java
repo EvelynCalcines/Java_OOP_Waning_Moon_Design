@@ -3,15 +3,15 @@ package Modules.Design.Clases;
 public class InvitationCard extends Service {
 
 	private String shape;
-	private String guest_name;
+	private String invited_name;
 	
 // CONSTRUCTOR //
 
-	public InvitationCard(String id, String owner_name, String course_name, int price, String colors, String shape, String guest_name) {
+	public InvitationCard(String id, String owner_name, String course_name, String invited_name, int price, String colors, String shape) {
 		super(id, owner_name, course_name, price, colors);
 	
 		this.shape = shape;
-		this.guest_name = guest_name; 
+		this.invited_name = invited_name; 
 		
 	}
 	
@@ -35,8 +35,8 @@ public class InvitationCard extends Service {
 		
 	}
 	
-	public String getGuest_name() {
-		return guest_name; 
+	public String getInvited_name() {
+		return invited_name; 
 	
 	}
 	
@@ -46,8 +46,8 @@ public class InvitationCard extends Service {
 		this.shape = shape;
 	}
 	
-	public void setGuest_name(String guest_name) {
-		this.guest_name = guest_name; 
+	public void setInvited_name(String Invited_name) {
+		this.invited_name = Invited_name; 
 	}
 	
 // TO STRING //	
@@ -57,10 +57,10 @@ public class InvitationCard extends Service {
 		return "InvitationCard: " + "\n" + "Id: " + getId() + "\n" + 
 			   "Nombre del propietario: " + getOwner_name() + "\n" + 
 			   "Nombre del curso: " + getCourse_name() + "\n" + 
+			   "Nombre del invitado: " + getInvited_name() + "\n" +
 			   "Precio: " + getPrice() + "\n" + 
 		       "Colores: " + getColors() + "\n" +
-			   "Forma: " + getShape() + "\n" +
-		       "Nombre del invitado: " + getGuest_name(); 	
+			   "Forma: " + getShape();
 	}	
 }
 
