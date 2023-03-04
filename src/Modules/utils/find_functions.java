@@ -7,6 +7,8 @@ import Modules.utils.find_functions;
 
 public class find_functions {
 
+	// LOGOTIPO //
+
 	public static int find_logoDesign(LogoDesign logoDesign) {
 
 		for (int i = 0; i < Singleton.LogoDesign.size(); i ++ ) {
@@ -23,6 +25,7 @@ public class find_functions {
 
 	}
 
+	// TARJETA DE INVITACIÓN //
 
 	public static int find_invitationCard(InvitationCard invitationCard) {
 
@@ -39,4 +42,5 @@ public class find_functions {
 		return -1;
 
 	}
+
 }
