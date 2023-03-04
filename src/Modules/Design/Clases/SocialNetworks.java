@@ -45,7 +45,7 @@ public class SocialNetworks extends Service {
 			
 			return "InvitationCard: " + "\n" + "Id: " + getId() + "\n" + 
 				   "Nombre del propietario: " + getOwner_name() + "\n" + 
-				   "Nombre del curso: " + getCourse_name() + "\n" + 
+				   "Nombre de la marca/empresa: " + getCourse_name() + "\n" + 
 				   "Precio: " + getPrice() + "\n" + 
 			       "Colores: " + getColors() + "\n" + 
 				   "Tipo del diseño: " + getDesign_type();

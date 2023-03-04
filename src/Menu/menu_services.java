@@ -11,6 +11,7 @@ import Modules.Functions.CRUD.read_functions;
 import Modules.Functions.CRUD.update_functions;
 import Modules.utils.functions_menu;
 import Modules.Design.Clases.Singleton;
+import Modules.Design.Clases.SocialNetworks;
 
 import java.util.ArrayList;
 
@@ -24,8 +25,11 @@ public class menu_services {
 		boolean key_menu_services = false; 
 		LogoDesign log = null;
 		InvitationCard inv = null;
+		SocialNetworks soc = null;
 		Singleton.LogoDesign = new ArrayList <LogoDesign> ();
 		Singleton.InvitationCard = new ArrayList<InvitationCard> ();
+		Singleton.SocialNetworks = new ArrayList<SocialNetworks> ();
+
 
 		do {
 
@@ -99,7 +103,7 @@ public class menu_services {
 						break;
 
 					case 1: // READ
-						read_functions.read_invitationCard(inv);
+						read_functions.read_InvitationCard(inv);
 						break;
 
 					case 2: // UPDATE
@@ -143,23 +147,23 @@ public class menu_services {
 					switch (option_menu_socialnetworks) {
 
 					case 0: // CREATE
-						JOptionPane.showMessageDialog(null, "Create");
+						create_functions.create_SocialNetworks(soc);
 						break;
 
 					case 1: // READ
-						JOptionPane.showMessageDialog(null, "Read");
+						read_functions.read_SocialNetworks(soc);
 						break;
 
 					case 2: // UPDATE
-						JOptionPane.showMessageDialog(null, "Update");
+						update_functions.update_SocialNetworks(soc);;
 						break; 
 
 					case 3: // DELETE
-						JOptionPane.showMessageDialog(null, "Delete");
+						delete_functions.delete_SocialNetworks(soc);
 						break;
 
 					case 4: // ORDENAR
-						JOptionPane.showMessageDialog(null, "Ordenar");
+						order_functions.order_SocialNetworks();
 						break;
 
 					case 5: // ATRÁS

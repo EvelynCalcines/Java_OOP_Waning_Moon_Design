@@ -1,6 +1,7 @@
 package Modules.utils;
 
 import Modules.Design.Clases.Singleton;
+import Modules.Design.Clases.SocialNetworks;
 import Modules.Design.Clases.InvitationCard;
 import Modules.Design.Clases.LogoDesign;
 import Modules.utils.find_functions;
@@ -43,4 +44,21 @@ public class find_functions {
 
 	}
 
+	// REDES SOCIALES //
+
+	public static int find_socialNetworks(SocialNetworks socialNetworks) {
+
+		for (int i = 0; i < Singleton.SocialNetworks.size(); i ++ ) {
+			
+			if ((Singleton.SocialNetworks.get(i)).equals(socialNetworks)) {
+
+				return i;
+
+			}
+
+		}
+
+		return -1;
+
+	}
 }
