@@ -226,6 +226,7 @@ public static void read_InvitationCard(InvitationCard inv) {
 							case 6:
 
 								atributo = ("Forma: " + inv.getShape());
+								break;
 
 							case 7:
 							
@@ -351,6 +352,7 @@ public static void read_InvitationCard(InvitationCard inv) {
 							case 5:
 
 								atributo = ("Tipo de diseño: " + soc.getDesign_type());
+								break;
 
 							case 6:
 							
